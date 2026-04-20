@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
@@ -14,10 +15,21 @@ export function Header() {
           {/* Logo */}
           <Link 
             href="/" 
-            className="font-display text-lg lg:text-xl font-bold uppercase tracking-display"
-            style={{ fontFamily: 'var(--font-space-grotesk)' }}
+            className="flex items-center gap-2"
           >
-            Fit Together
+            <Image 
+              src="/logo.svg" 
+              alt="Fit Together" 
+              width={32} 
+              height={29} 
+              className="h-7 lg:h-8 w-auto"
+            />
+            <span 
+              className="font-display text-lg lg:text-xl font-bold uppercase tracking-display"
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
+            >
+              Fit Together
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
